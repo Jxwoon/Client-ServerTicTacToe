@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div id="start">
+    <div class="row top-space">
+        <div class="col-lg-12">
+            <ul id="messages"></ul>
+            Enter Your Username <input class="form-control" id="message-content" />
+        </div>
+    </div>
+</div>
+
+<h2>Let's play Tic Tac Toe</h2>
+<br />
+
+<div id="buttons">
+    <p id="one"> Player One</p>
+    <p id="two"> Player Two </p>
+
+</div>
+<br />
+<br />
+<style>
+    .square {
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 50px;
+    }
+
+    #message {
+        font-size: 20px;
+    }
+
+    #buttons {
+        text-align: center;
+    }
+
+    table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #bottomStuff {
+        text-align: center;
+    }
+</style>
+
+<body onload="startGame();">
+    <table id="table" border="1">
+        <tr id="row1">
+            <td id="1" class="square" ></td>
+            <td id="2" class="square" ></td>
+            <td id="3" class="square" ></td>
+        </tr>
+        <tr id="row2">
+            <td id="4" class="square" ></td>
+            <td id="5" class="square" ></td>
+            <td id="6" class="square" ></td>
+        </tr>
+        <tr id="row3">
+            <td id="7" class="square" ></td>
+            <td id="8" class="square" ></td>
+            <td id="9" class="square" ></td>
+        </tr>
+    </table>
+    <div id="bottomStuff">
+        <div id="m">Game On!</div>
+        <br />
+        <br />
+        <div id="GameOver">
+            <p>Do you want to play again?</p>
+            <button type="submit" class="btn btn-large btn-primary" OnClientClick="this.disabled='true';return true;">YES</button>
+            <button type="submit" class="btn btn-large btn-primary" OnClientClick="this.disabled='true';return true;">NO</button>
+        </div>
+    </div>
+</body>
+
+
+@section Scripts {
+    <script src="~/Scripts/ttt.js"></script>
+    <script data-main="scripts/main" src="https://rawgit.com/radu-matei/websocket-manager/master/src/WebSocketManager.Client.TS/dist/WebSocketManager.js"></script>
+}

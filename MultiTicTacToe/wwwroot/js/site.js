@@ -23,7 +23,7 @@ $(document).ready(function () {
 
     // This allows user to input their username and wait for the other player
     connection.clientMethods["Username"] = (socketId, message) => {
-
+        alert("message sent");
         if (IdOne.length == 0) {
             IdOne = socketId;
 
@@ -37,7 +37,6 @@ $(document).ready(function () {
                 UserOne = message;
                 UserOneReady = true;
                 $('#one').html(UserOne + " - X");
-
             }
         } else {
             if (UserTwo.length == 0) {
@@ -66,15 +65,15 @@ $(document).ready(function () {
                 return false;
             }
             connection.invoke("EnterUsername", connection.connectionId, message);
+
             $messagecontent.val('');
         }
 
     });
-
     // Main control of how Tic Tac Toe is played
     // Sends information between the server and client
     connection.clientMethods["Game"] = (socketId, square) => {
-       
+
         if (document.getElementById(square).innerText != "") {
             setMessage("That's an invalid move");
             return;
@@ -101,56 +100,69 @@ $(document).ready(function () {
         }
     }
 
-
-
     // Below are each square in the tic tac toe board
     // invoking the client- server to be played
     var $1 = $('#1');
     $1.on("click", function (e) {
-        connection.invoke("PlayingGame", connection.connectionId, "1");
-
+        if (connection.connectionId != whoPlayed) {
+            connection.invoke("PlayingGame", connection.connectionId, "1");
+        }
     });
 
     var $2 = $('#2');
     $2.on("click", function (e) {
-        connection.invoke("PlayingGame", connection.connectionId, "2");
-
+        if (connection.connectionId != whoPlayed) {
+            connection.invoke("PlayingGame", connection.connectionId, "2");
+        }
     });
 
     var $3 = $('#3');
     $3.on("click", function (e) {
-        connection.invoke("PlayingGame", connection.connectionId, "3");
+        if (connection.connectionId != whoPlayed) {
+            connection.invoke("PlayingGame", connection.connectionId, "3");
+        }
     });
 
     var $4 = $('#4');
     $4.on("click", function (e) {
-        connection.invoke("PlayingGame", connection.connectionId, "4");
-
+        if (connection.connectionId != whoPlayed) {
+            connection.invoke("PlayingGame", connection.connectionId, "4");
+        }
     });
 
     var $5 = $('#5');
     $5.on("click", function (e) {
-        connection.invoke("PlayingGame", connection.connectionId, "5");
+        if (connection.connectionId != whoPlayed) {
+            connection.invoke("PlayingGame", connection.connectionId, "5");
+        }
     });
 
     var $6 = $('#6');
     $6.on("click", function (e) {
-        connection.invoke("PlayingGame", connection.connectionId, "6");
+        if (connection.connectionId != whoPlayed) {
+            connection.invoke("PlayingGame", connection.connectionId, "6");
+        }
     });
 
     var $7 = $('#7');
     $7.on("click", function (e) {
-        connection.invoke("PlayingGame", connection.connectionId, "7");
+        if (connection.connectionId != whoPlayed) {
+            connection.invoke("PlayingGame", connection.connectionId, "7");
+        }
     });
 
     var $8 = $('#8');
     $8.on("click", function (e) {
-        connection.invoke("PlayingGame", connection.connectionId, "8");
+        if (connection.connectionId != whoPlayed) {
+            connection.invoke("PlayingGame", connection.connectionId, "8");
+        }
     });
 
     var $9 = $('#9');
     $9.on("click", function (e) {
-        connection.invoke("PlayingGame", connection.connectionId, "9");
+        if (connection.connectionId != whoPlayed) {
+            connection.invoke("PlayingGame", connection.connectionId, "9");
+        }
     });
 
 

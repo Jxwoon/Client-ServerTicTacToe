@@ -9854,11 +9854,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\t-jawoon\\Documents\\Visual Studio 2017\\Projects\\MultiTicTacToe\\MultiTicTacToe\\MultiTicTacToe.csproj",
+      "projectUniqueName": "C:\\Users\\t-jawoon\\Documents\\GitHub\\Client-ServerTicTacToe\\MultiTicTacToe\\MultiTicTacToe.csproj",
       "projectName": "MultiTicTacToe",
-      "projectPath": "C:\\Users\\t-jawoon\\Documents\\Visual Studio 2017\\Projects\\MultiTicTacToe\\MultiTicTacToe\\MultiTicTacToe.csproj",
+      "projectPath": "C:\\Users\\t-jawoon\\Documents\\GitHub\\Client-ServerTicTacToe\\MultiTicTacToe\\MultiTicTacToe.csproj",
       "packagesPath": "C:\\Users\\t-jawoon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\t-jawoon\\Documents\\Visual Studio 2017\\Projects\\MultiTicTacToe\\MultiTicTacToe\\obj\\",
+      "outputPath": "C:\\Users\\t-jawoon\\Documents\\GitHub\\Client-ServerTicTacToe\\MultiTicTacToe\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\t-jawoon\\AppData\\Roaming\\NuGet\\NuGet.Config",
